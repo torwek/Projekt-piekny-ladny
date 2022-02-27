@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bmi.css">
+    <title>Licznik BMI</title>
+</head>
+<body>
+    <div class="back">
+        <div class="content">
+            <div class="specjalne">
+            <span class="tytul">Licznik BMI</span>
+                <form>
+                    <div class="laczenie">Waga:<input type="text" class="waga"> kg</div>
+                    <div class="laczenie">Wzrost:<input type="text" class="wzrost"> cm</div>
+                    <div class="plec">
+                        Płeć:
+                        <input type="radio" class="male" name="plec">
+                        <label for="male">M</label>
+                        <input type="radio" class="female" name="plec">
+                        <label for="female">K</label>
+                    </div>
+                    <div class="przycisk"><button>OBLICZ</button></div>
+                </form>
+            </div>
+            <div class="wynik"></div>
+        </div>
+    </div>
+
+    <script src="./aplikacje - js/bmi.js"></script>
+</body>
+</html>

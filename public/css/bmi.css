@@ -1,0 +1,152 @@
+@import url(./ogolne.css);
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+    min-height: 100vh;
+}
+
+.back{
+    background-image: url(../zdjecia/sport.png);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-color:  rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 900px;
+    min-height: 100vh;
+    background-color: rgba(221, 221, 221,0.65);
+    border-left: rgb(158, 105, 56) 10px solid;
+    border-right: rgb(158, 105, 56) 10px solid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.specjalne{
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tytul{
+    font-size: 10em;
+    font-family: 'Amatic SC', cursive;
+}
+
+form{
+    width: 400px;
+    font-size: 50px;
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.laczenie,
+.plec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+input{
+    width: 200px;
+    height: 50px;
+   outline: none;
+    border-radius: 20px;
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.male,
+.female{
+    margin-right: -60px;
+}
+
+.wzrost{
+    margin-left: -20px;
+}
+
+.przycisk{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 33px;
+    background-color: rgb(158, 105, 56);
+    border: 4px solid rgb(126, 76, 30);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(206, 138, 74);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.wynik{
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-family: 'Amatic SC', cursive;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.agresywnaczcionka{
+    font-family: 'Anton', sans-serif;
+    font-size: 55px;
+}
+
+@media all and (max-width:550px) {
+    .tytul{
+        font-size: 7em;
+    }
+
+    form{
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .plec input{
+        width: 50px;
+    }
+
+    .plec,
+    .laczenie{
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width:400px){
+    .tytul{
+        font-size: 25vw;
+    }
+
+    .plec input{
+        margin-right: 5px;
+    }
+
+    form input{
+        width: 150px;
+    }
+}

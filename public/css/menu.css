@@ -1,0 +1,96 @@
+@import url(./ogolne.css);
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@700&display=swap');
+
+svg{
+    width: 50px;
+    height: 50px;
+    margin: 35px 0;
+    fill: #ddd;
+}
+
+.row:hover svg{
+    fill:rgb(95, 106, 255);
+    filter: drop-shadow( 1px 1px 2.1px rgb(171, 156, 236));
+    transition: all 0.2s ease-in;
+}
+
+.row:hover .dodatkowy_wpis{
+    color:rgb(95, 106, 255);
+    text-shadow: 1px 1px 2.1px rgb(171, 156, 236);
+}
+
+.calosc{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../zdjecia/sport.png);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3);
+}
+
+.menu_boczne{
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(5, 4, 20, 0.7);
+    padding: 20px 20px 0 10px;
+    transition: width 0.6s ease-in-out;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dodatkowy_wpis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+    font-family: 'Amatic SC', cursive;
+    width: 0;
+    padding: 0;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0;
+}
+
+.zmiana{
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+    padding-left: 20px;
+    width: 80%;
+}
+
+.logo{
+    position: absolute;
+    background-image: url(../zdjecia/logo_biale.png);
+    width: 70px;
+    height: 90px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    top:0;
+    right: 0;
+    transform: scaleX(-1);
+    margin: 10px;
+}
+
+.zegar{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ddd;
+    font-size: 6em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    font-family: 'Amatic SC', cursive;
+}

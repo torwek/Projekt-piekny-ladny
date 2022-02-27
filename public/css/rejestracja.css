@@ -1,0 +1,185 @@
+@import url(ogolne.css);
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@700&display=swap');
+
+*{
+    overflow-y: hidden;
+}
+
+.formularz{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../zdjecia/tjudym.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.kolor-change{
+    display: flex;
+    background-color: #f4a658;
+    justify-content: center;
+    align-items:center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    flex-direction: column;
+    position: relative;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-top:20px;
+}
+
+form input:not(:last-child){
+    margin: 15px 0;
+    outline: none;
+    height: 35px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #f4a658;
+}
+
+form input:focus{
+    background-color: #ffd6ae;
+    transition: 0.3s ease-in-out all;
+}
+
+form input:last-child{
+    margin-top: 2px;
+}
+
+form input{
+    font-size: 27px;
+    letter-spacing: 3px;
+    font-family: 'Amatic SC', cursive;
+    padding: 0 5px;
+}
+
+.laczenie{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 13px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.laczenie label{
+    padding-left: 10px;
+}
+
+.reje{
+    font-family: 'Dancing Script', cursive;
+    font-size: 6em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+}
+
+button{
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: #99520b;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover{
+    background-color: #b15e0c;
+    transition: 0.5s all ease-in-out;
+}
+
+.haslo{
+    margin: 15px 0;
+    outline: none;
+    height: 35px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #f4a658;
+}
+
+.bledy{
+    min-height: 100px;
+    background-color: rgb(255, 57, 31);
+    width: 100%;
+    box-sizing: content-box;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.pojawienie{
+    height: 35px;
+    font-size: 25px;
+}
+
+.przyciskchange{
+    position: absolute;
+    width: 100vw;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 4em;
+    color: #fff;
+    border-radius: 20px;
+    border: 4px solid rgb(255, 103, 82);
+    text-align: center;
+}
+
+.logow a:hover{
+    color: #99520b;
+    transition: all 0.5s ease-in-out;
+}
+
+.speclog{
+    position: absolute;
+    bottom: 0;
+}
+
+@media all and (max-width:760px) {
+    
+    .reje{
+        writing-mode: vertical-lr;
+        letter-spacing: 0;
+        font-size: 4em;
+        height: 300px;
+    }
+
+    .kolor-change{
+        width: 200vw;
+    }
+
+    .logow{
+        width: 200px;
+    }
+}
