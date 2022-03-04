@@ -117,6 +117,20 @@ button:hover{
     font-size: 55px;
 }
 
+.powrot{
+    position: absolute;
+    background-image: url(../zdjecia/logo_biale.png);
+    width: 70px;
+    height: 90px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    top:0;
+    right: 0;
+    transform: scaleX(-1);
+    margin: 10px;
+}
+
 @media all and (max-width:550px) {
     .tytul{
         font-size: 7em;

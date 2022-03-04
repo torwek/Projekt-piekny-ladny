@@ -55,7 +55,6 @@ svg{
     color: #ddd;
     font-family: 'Amatic SC', cursive;
     width: 0;
-    padding: 0;
     font-size: 30px;
     text-align: center;
     opacity: 0;
@@ -63,9 +62,9 @@ svg{
 
 .zmiana{
     opacity: 1;
-    transition: opacity 3s ease-in-out;
-    padding-left: 20px;
+    transition: width 0.5s ease-in-out, opacity 3s ease-in-out, padding-left 0.3s ease-in;
     width: 80%;
+    padding-left: 20px;
 }
 
 .logo{
@@ -93,4 +92,23 @@ svg{
     left: 50%;
     transform: translate(-50%,-60%);
     font-family: 'Amatic SC', cursive;
+    text-align: center;
+}
+
+@media all and (max-width:780px){
+    .zegar{
+        font-size: 4em;
+        transform: translate(-40%,-60%);
+        width: 300px;
+    }
+}
+
+@media all and (max-width:500px){
+    .zegar{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
 }
