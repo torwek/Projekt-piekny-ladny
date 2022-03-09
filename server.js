@@ -51,10 +51,12 @@ async function handleLogin(req, res) {
     const user = await getUser(login, password);
 
     if (user) {
+        validation = true
         res.json({
             isOk: true
         })
     } else {
+        validation = false
         res.json({
             isOk: false,
             errors: ['Niepoprawne hasło lub login']
@@ -70,17 +72,20 @@ async function handleRegistration(req, res) {
     const isAlreadyRegistered = await checkIfUserAlreadyExists(user);
     
     if (validationErrors.length) {
+        validation = false;
         res.json({
             isOk: false,
             errors: validationErrors
         })
     } else if (isAlreadyRegistered) {
+        validation = false;
         res.json({
             isOk: false,
             errors: ["Użytkownik istnieje już w bazie"]
         })
     } else {
         registerUser(user);
+        validation = true;
         res.json({
             isOk: true
         })
@@ -88,8 +93,9 @@ async function handleRegistration(req, res) {
 
     res.end()
 }
-
+let validation = false;
 app.get('/', (req, res) => {
+    validation = false
     res.sendFile(__dirname + '/public/index.html');
 })
 
@@ -102,7 +108,9 @@ app.get('/register', (req, res) => {
 })
 
 app.get('/main', (req, res) => {
-    res.sendFile(__dirname + '/public/menu_rzeczy.html')
+    if(validation==true){
+        res.sendFile(__dirname + '/public/menu_rzeczy.html')
+    }else res.redirect('/')
 })
 
 app.post('/login', multer.none(), handleLogin)

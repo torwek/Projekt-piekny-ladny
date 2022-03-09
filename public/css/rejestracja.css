@@ -166,6 +166,11 @@ button:hover{
     bottom: 0;
 }
 
+.svgeffect{
+    width: 30px;
+    height: 30px;
+}
+
 @media all and (max-width:760px) {
     
     .reje{

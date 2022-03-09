@@ -38,6 +38,7 @@ svg{
     background-color: rgba(5, 4, 20, 0.7);
     padding: 20px 20px 0 10px;
     transition: width 0.6s ease-in-out;
+    z-index: 2;
 }
 
 .row{
@@ -93,6 +94,7 @@ svg{
     transform: translate(-50%,-60%);
     font-family: 'Amatic SC', cursive;
     text-align: center;
+    z-index: 1;
 }
 
 @media all and (max-width:780px){
